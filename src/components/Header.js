@@ -1,14 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
 
 const Header = (props) => {
   return (
     <div>
-      <Header 
-        titolo = "Notizie"
-      />
+      <a href="index.html">{props.titolo}</a>
     </div>
-  )
-}
+  );
+};
 
 export default Header;

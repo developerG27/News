@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
+import Notizie from './components/Notizie';
 
 class App extends Component {
 
@@ -7,9 +9,9 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.consulareNotizie();
+    this.consultareNotizie();
   }
-  consulareNotizie = () => {
+  consultareNotizie = () => {
     let url = `https://newsapi.org/v2/everything?q=bitcoin&from=2018-09-10&sortBy=publishedAt&apiKey=eb10258121314635876caad77ca78b61`;
     // console.log(url)
 
@@ -29,7 +31,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Ciao</h1>
+        <Header 
+          titolo = "Notizie"
+        />
+
+        <Notizie 
+          notizie = {this.state.notizie}
+        />
       </div>
     );
   }
