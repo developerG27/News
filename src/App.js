@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Notizie from './components/Notizie';
+import Form from './components/Form';
 
 class App extends Component {
 
@@ -35,6 +36,10 @@ class App extends Component {
 
         <Notizie 
           notizie = {this.state.notizie}
+        />
+
+        <Form 
+
         />
       </div>
     );
