@@ -12,7 +12,7 @@ class App extends Component {
     this.consultareNotizie();
   }
   consultareNotizie = () => {
-    let url = `https://newsapi.org/v2/everything?q=bitcoin&from=2018-09-10&sortBy=publishedAt&apiKey=eb10258121314635876caad77ca78b61`;
+    let url = `https://newsapi.org/v2/everything?q=bitcoin&from=2018-09-11&sortBy=publishedAt&apiKey=eb10258121314635876caad77ca78b61`;
     // console.log(url)
 
     fetch(url)
@@ -21,12 +21,10 @@ class App extends Component {
       })
       .then(notizie => {
         this.setState({
-          notizie: notizie.articles
+          notizie : notizie.articles
         })
       })
   }
-
-
 
   render() {
     return (

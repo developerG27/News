@@ -5,9 +5,11 @@ class Notizie extends Component {
   render() { 
     return ( 
       <div>
-        <Notizia
-        
-        />
+        {this.props.notizie.map(notizia => (
+          <Notizia
+            notizia = {notizia}
+          />
+        ))}
       </div>
      )
   }
