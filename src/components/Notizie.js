@@ -7,6 +7,7 @@ class Notizie extends Component {
       <div>
         {this.props.notizie.map(notizia => (
           <Notizia
+            key={notizia.url}
             notizia = {notizia}
           />
         ))}

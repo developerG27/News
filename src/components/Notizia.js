@@ -1,5 +1,10 @@
 import React from 'react';
-const Notizia = () => {
+const Notizia = (props) => {
+  const {urlToImage, url, title, description, source} = props.notizia;
+
+  console.log(urlToImage);
+
+
   return(
     <div>
       <p>Da notizia</p>
